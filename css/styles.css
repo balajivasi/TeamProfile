@@ -1,0 +1,41 @@
+*{
+	font-size: 11px;
+}
+a{
+	color: #666;
+}
+.m-0{
+	margin: 0px;
+}
+.pullright{
+	float: right;;
+}
+.pullleft{
+	float: left;;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.p-0{
+	padding: 0px;
+}
+.pl-0{
+    padding-left: 0px;
+}
+.list-group{
+	border-top:1px solid #ccc;
+	display: inline-block;
+	width: 100%;
+}
+.lightBox{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+}
