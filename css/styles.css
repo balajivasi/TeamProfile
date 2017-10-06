@@ -28,7 +28,6 @@ a{
 	width: 100%;
 }
 .lightBox{
-	display: none;
 	position: fixed;
 	z-index: 1;
 	padding-top: 100px;
@@ -39,3 +38,27 @@ a{
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.6);
 }
+.dataPanel{
+	width: 300px;
+    margin: auto;
+    display: flex;
+    background: #fff;
+    min-height: 40vh;
+}
+.btn{
+	display: inline-block;
+	width: 50%;
+	padding:10px;
+}
+.contentPanel{
+	min-height: 35vh;
+	padding:10px
+}
+button.close span{
+	font-size: 25px;
+}
+
+
+
+
+

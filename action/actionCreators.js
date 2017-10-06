@@ -1,20 +1,42 @@
 export const ACTIONTYPE={
 	UPDATENAME:'UPDATENAME',
 	UPDATEADDRESS:'UPDATEADDRESS',
-	ADDTEAMS:'ADDTEAMS'
+	ADDTEAMS:'ADDTEAMS',
+	SHOWHIDE:'SHOWHIDE',
+	SHOWEDITPAGE:'SHOWEDITPAGE'
 }
 
 export function UpdateName(name){
-	type:ACTIONTYPE.UPDATENAME,
-	name
+	return {
+		type:ACTIONTYPE.UPDATENAME,
+		name
+	}
 }
 
 export function UpdateAddress(address){
-	type:ACTIONTYPE.UPDATEADDRESS,
-	address
+	return {
+		type:ACTIONTYPE.UPDATEADDRESS,
+		address
+	}
 }
 
 export function addTeams(teamlist){
-	type:ACTIONTYPE.ADDTEAMS,
-	teamlist
+	return {
+		type:ACTIONTYPE.ADDTEAMS,
+		teamlist
+	}
+}
+
+export function showHideLightBox(flag){
+	return {
+		type:ACTIONTYPE.SHOWHIDE,
+		flag
+	}
+}
+
+export function showDetailsEdit(id){
+	return{
+		type:ACTIONTYPE.SHOWEDITPAGE,
+		id
+	}
 }

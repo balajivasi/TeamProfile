@@ -1,13 +1,14 @@
-import {createStore} from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import profileReducer from '../reducers/profileReducer'
+import configData from '../data/globalData'
 
-import rootreducer from '../reducers'
-
-import globalData from '../data/globalData'
-
-const defaultState={
-	globalData
+let initialState={
+	configData:configData
 }
-const Store=createStore(rootreducer,defaultState)
+console.log(initialState)
+
+const store=compose(applyMiddleware(thunk))(createStore)(profileReducer,initialState);
 
 
-export default Store;
+export default store;
