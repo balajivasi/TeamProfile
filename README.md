@@ -1,5 +1,5 @@
-# ReactJSWebsite
-ReactJS website with login 
+# ReactJS Team Profile Website
+ReactJS website Team profile add team, edit name and address. 
 
 # install
 
