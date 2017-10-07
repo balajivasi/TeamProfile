@@ -1,6 +1,12 @@
 import React from 'react'
 import Button from './button'
 
+/*
+	EditTeam component will handle the team add or edit
+	
+
+*/
+
 class EditTeam extends React.Component{
 	constructor(props){
 		super(props)

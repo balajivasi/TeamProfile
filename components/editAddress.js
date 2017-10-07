@@ -1,6 +1,14 @@
 import React from 'react'
 import Button from './button'
 
+/* Address Edit page 
+	
+	handleChange function will handel input data
+	hidelight function will hide Light box after clicking close/cance/save
+	submitaddress function will send data to actionCreater. action creater will calls reducer and reducer will upadte store then view will updates.
+ 	
+ 	Button component is reusable button component
+ */
 class EditAddress extends React.Component{
 	constructor(props){
 		super(props)
@@ -42,8 +50,8 @@ class EditAddress extends React.Component{
 						</div>
 					</div>
 					<div className="col-lg-12 m-0 p-0">
-						<Button classdetails="btn btn-primary" clikSubmit={this.hidelight.bind(this)}>Cancel</Button>
-						<Button classdetails="btn btn-success" clikSubmit={this.submitAddress.bind(this)}>Save</Button>
+						<Button settype="button" classdetails="btn btn-primary" clikSubmit={this.hidelight.bind(this)}>Cancel</Button>
+						<Button settype="button" classdetails="btn btn-success" clikSubmit={this.submitAddress.bind(this)}>Save</Button>
 					</div>
 				</div>
 	}

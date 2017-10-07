@@ -5,6 +5,8 @@ import LightBox from './lightbox'
 import EditName from './editName'
 import EditAddress from './editAddress'
 import EditTeam from './editTeam'
+
+/* Body Panel will contain full application Html and light box components. can consider as another master(body) page*/
 class BodyPanel extends React.Component{
 	
 	showlight(id=""){

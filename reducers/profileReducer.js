@@ -1,4 +1,6 @@
 
+//profile reducers
+
 function profileReducer(state=[], action){
 	switch(action.type){
 		case 'UPDATENAME':

@@ -1,5 +1,7 @@
 import React from 'react'
 
+/* header components will holds page Header*/
+
 export default class Header extends React.Component{
 	render(){
 		return <header className="navbar navbar-inverse">

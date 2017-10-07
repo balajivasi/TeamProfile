@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+/* light box component will take care about lightBox, close and children data/components */
 export default class LightBox extends React.Component{
 	showlight(){
 		this.props.showHideLightBox(!this.props.globalData.showLightbox)

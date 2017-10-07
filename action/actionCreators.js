@@ -1,3 +1,4 @@
+/* Action type */
 export const ACTIONTYPE={
 	UPDATENAME:'UPDATENAME',
 	UPDATEADDRESS:'UPDATEADDRESS',
@@ -6,6 +7,7 @@ export const ACTIONTYPE={
 	SHOWEDITPAGE:'SHOWEDITPAGE'
 }
 
+// action creaters
 export function UpdateName(name){
 	return {
 		type:ACTIONTYPE.UPDATENAME,
