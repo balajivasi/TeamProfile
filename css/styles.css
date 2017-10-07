@@ -43,7 +43,6 @@ a{
     margin: auto;
     display: flex;
     background: #fff;
-    min-height: 40vh;
 }
 .btn{
 	display: inline-block;
@@ -51,8 +50,11 @@ a{
 	padding:10px;
 }
 .contentPanel{
-	min-height: 35vh;
-	padding:10px
+}
+button.close{
+	right: 10px;
+	z-index: 9;
+    position: absolute;
 }
 button.close span{
 	font-size: 25px;

@@ -5,7 +5,7 @@ const configData={
 		"address2":"edison NJ",
 		"zipcode":"08837"
 	},
-	"team":['Team 1','Team 2','Team 3'],
+	"team":['','',''],
 	"showLightbox":false
 };
 

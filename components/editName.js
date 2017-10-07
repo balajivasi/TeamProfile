@@ -21,9 +21,9 @@ class EditName extends React.Component{
 		this.hidelight()
 	}
 	render(){
-		return  <div className="">
-				 	<div className="form-group">
-					    <label htmlFor="Name">Edit Name</label>
+		return  <div className="Namepanel">
+				 	<div className="col-lg-12 form-group">
+					    <h4>Edit Name</h4>
 					    <input type="email" className="form-control" ref="editName" id="name" onChange={this.handleChange.bind(this)} placeholder="Email" value={this.state.name} />
 					</div>
 					<div className="col-lg-12 m-0 p-0">

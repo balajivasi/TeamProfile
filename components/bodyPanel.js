@@ -40,7 +40,12 @@ class BodyPanel extends React.Component{
 					</ListItems>
 					<ListItems title="FavouriteTeams">
 						<div className="col-lg-3">
-							{this.props.globalData.team.map((name,i)=><h5 key={i}>{name}</h5>)}
+							{this.props.globalData.team.map(
+								(name,i)=>{
+										let data=name?<p>{i+1} {name}</p>: ''
+										return data
+									})
+							}
 						</div>
 						<div className="col-lg-3"><button className="btn btn-primary" onClick={this.showlight.bind(this,'team')}>Add Teams</button></div>
 					</ListItems>

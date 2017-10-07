@@ -8,10 +8,8 @@ function profileReducer(state=[], action){
 		case 'UPDATEADDRESS':
 			let newAddress=Object.assign({},state.configData,{"address":action.address})
 			return {configData:newAddress}
-
 		case 'ADDTEAMS':
-			return state
-
+			return {configData:Object.assign({},state.configData,{"team":action.teamlist})}
 		case 'SHOWHIDE':
 			let show=Object.assign({},state.configData,{"showLightbox":action.flag})
 			return  { configData:show };

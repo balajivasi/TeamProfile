@@ -5,50 +5,59 @@ class EditTeam extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			
+			teamData:this.props.globalData.team
 		}
 	}
-	handleChange(){
-		this.setState({
-			
-		})
-	}
+	handleChange(i, event) {
+	     let teamData = this.state.teamData.slice();
+	     teamData[i] = event.target.value;
+	     this.setState({teamData});
+	  }
+	
 	hidelight(){
 		this.props.showHideLightBox(!this.props.globalData.showLightbox)
 	}
-	submitAddress(){
-		this.props.addTeams(this.state);
+	submitTeam(){
+		this.props.addTeams(this.state.teamData);
 		this.hidelight()
 	}
+	addData(){
+		let newelement=''
+		this.setState({
+			teamData:[...this.state.teamData, newelement]
+		})
+	}
+	showTeamList(){
+		let uiItems = [];
+	     for(let i = 0; i < this.state.teamData.length; i++){
+	     		let item=<div key={i} className="form-group">
+	               		<label htmlFor="Team" className="col-sm-3 control-label">Team {i+1}</label>
+				    	<div className="col-sm-9">
+	                   		<input className="form-control" type="text" value={this.state.teamData[i] || ''} onChange={this.handleChange.bind(this,i)} />
+	                   	</div>
+	               </div>
+	           uiItems.push(item)
+	     }
+	     return uiItems || null;
+	}
 	render(){
-		return  <div className="col-lg-12">
-					<h3>Update Address</h3>
-					<form class="form-horizontal">
-				 	<div className="form-group">
-					    <label htmlFor="Team1" className="col-sm-2 control-label">Team1</label>
-					    <div class="col-sm-10"><input type="text" className="form-control" ref="Team1" id="Team1" onChange={this.handleChange.bind(this)} placeholder="Team 1"  /></div>
-					</div>
-					<div className="form-group">
-					    <label htmlFor="Team2" className="col-sm-2 control-label">Team2</label>
-					    <div class="col-sm-10">
-					    	<input type="text" className="form-control" ref="Team2" id="Team2" 
-					    		onChange={this.handleChange.bind(this)} placeholder="Team 2" />
-					   	</div>
-					</div>
-					<div className="form-group">
-					    <label htmlFor="Team3" className="col-sm-2 control-label">Team3</label>
-					    <div class="col-sm-10">
-					    	<input type="text" className="form-control" ref="Team3" id="Team3" 
-					    		onChange={this.handleChange.bind(this)} placeholder="Team 3" />
-					    </div>
-					</div>
+		return  <div className="col-lg-12 m-0 p-0 form-horizontal">
+					<div className="col-lg-12">
+						<h4>Add Teams</h4>
+						{this.showTeamList()}
+						<Button classdetails="btn btn-link" settype="button" clikSubmit={this.addData.bind(this)}>+ Add another</Button>
+					</div>	
 					<div className="col-lg-12 m-0 p-0">
-						<Button classdetails="btn btn-primary" clikSubmit={this.hidelight.bind(this)}>Cancel</Button>
-						<Button classdetails="btn btn-success" clikSubmit={this.submitAddress.bind(this)}>Save</Button>
+						<Button settype="button" classdetails="btn btn-primary" clikSubmit={this.hidelight.bind(this)}>Cancel</Button>
+						<Button settype="submit" classdetails="btn btn-success" clikSubmit={this.submitTeam.bind(this)}>Save</Button>
 					</div>
-					</form>
 				</div>
 	}
 }
-
 export default EditTeam
+
+
+
+
+
+
