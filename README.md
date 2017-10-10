@@ -9,6 +9,8 @@ npm install
 
 npm start
 
+localhost:6812
+
 # Production Build 
 
 npm run build
